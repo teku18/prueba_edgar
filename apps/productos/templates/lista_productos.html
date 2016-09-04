@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Lista de todos los productos</h1>
+<table border="1px;">
+    <tr>
+        <th>Clave</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+    </tr>
+    {% for lista in lista_productos %}
+
+        <tr>
+            <td>
+                <a href="{% url 'actualizar-producto' lista.id %}">{{ lista.id }}</a>
+            </td>
+            <td>{{ lista.nombre }}</td>
+            <td>{{ lista.descripcion }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

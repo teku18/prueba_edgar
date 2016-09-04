@@ -1,0 +1,8 @@
+*.pyo
+*.pyc
+proyectoEdgar/settings.py
+proyectoEdgar/wsgi.py
+media
+media/*
+proyectoEdgar/static/*
+*.xml
