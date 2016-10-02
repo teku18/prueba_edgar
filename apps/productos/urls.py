@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include, patterns
 from .views import index, registrar_producto, actualizar_producto, lista_productos, eliminar_producto, detalle_producto
 
 urlpatterns = [
