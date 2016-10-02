@@ -1,6 +1,15 @@
 from django import forms
+from django.forms import Textarea
 from .models import producto
 
-class productosForm(forms.Form):
-    nombre = forms.CharField(max_length=100, label='Nombre del producto'),
-    descripcion = forms.CharField(widget=forms.Textarea, label='Descripcion del producto', max_length=200)
+class productosForm(forms.ModelForm):
+
+    class Meta:
+        model=producto
+
+        fields=['nombre', 'descripcion']
+
+        widgets={
+            'descripcion': Textarea(attrs={'cols':50,'rows':10}),
+
+        }

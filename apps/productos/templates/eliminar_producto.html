@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>¿ Desea eliminar de la base de datos del producto {{ object.nombre }}, con la clave {{ object.id }} ?</h1>
+    <form action="" method="post">{% csrf_token %}
+        <input type="submit" value="SI" >
+        <a href="{% url 'lista-productos' %}">Regresar</a>
+    </form>
+</body>
+</html>

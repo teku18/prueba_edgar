@@ -7,6 +7,10 @@ class producto(models.Model):
     estatus = models.ForeignKey('estatu', blank=True, null=True)
     marcas = models.ForeignKey('marca', blank=True, null=True)
 
+    # #Muestra los datos ordenados desde la base de datos
+    # class Meta:
+    #     ordering=['id']
+
     def __str__(self):
         return self.nombre
 
