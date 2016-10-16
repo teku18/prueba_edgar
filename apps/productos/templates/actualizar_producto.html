@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Actualizar producto</h1>
+{% extends 'base.html' %}
 
-<form method="post" action="">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Actualizar">
-    <input type="submit" {% url 'lista-productos' %} value="Regresar">
-</form>
-</body>
-</html>
+{% block title %}Actualizar producto{% endblock %}
+
+{% block content %}
+
+    <h1>Actualizar producto</h1>
+
+    <form method="post" action="">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" id="boton" value="Actualizar">
+    </form>
+    <a href="{% url 'lista-productos' %}">Regresar</a>
+{% endblock %}

@@ -1,0 +1,1 @@
+web: gunicorn proyectoedgar.wsgi

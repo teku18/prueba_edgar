@@ -1,35 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link type="text/css" rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
-<h1>Lista de todos los productos</h1>
-<form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
-    <table border="1px;">
-        <tr>
-            <th>Clave</th>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Opciones</th>
-        </tr>
-        {% for lista in lista_productos %}
+{% extends 'base.html' %}
 
+{% block title %}Lista productos{% endblock %}
+
+{% block content %}
+
+    <h1>Lista de todos los productos</h1>
+    <a href="{% url 'inicio' %}">Regresar</a>
+    <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+        <table border="1px;">
             <tr>
-                <td>
-                    <a href="{% url 'actualizar-producto' lista.id %}">{{ lista.id }}</a>
-                </td>
-                <td>{{ lista.nombre }}</td>
-                <td>{{ lista.descripcion }}</td>
-                <td>
-                    <a href="{% url 'eliminar-producto' lista.id %}">Eliminar</a>
-                    <a href="{% url 'detalle-producto' lista.id %}">Detalle</a>
-                </td>
+                <th>Clave</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Opciones</th>
             </tr>
-        {% endfor %}
-    </table>
-</form>
-</body>
-</html>
+            {% for lista in lista_productos %}
+
+                <tr>
+                    <td>
+                        <a href="{% url 'actualizar-producto' lista.id %}">{{ lista.id }}</a>
+                    </td>
+                    <td>{{ lista.nombre }}</td>
+                    <td>{{ lista.descripcion }}</td>
+                    <td>
+                        <a href="{% url 'eliminar-producto' lista.id %}">Eliminar</a>
+                        <a href="{% url 'detalle-producto' lista.id %}">Detalle</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+{% endblock %}

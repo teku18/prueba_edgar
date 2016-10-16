@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-{#    <link type="text/css" rel="stylesheet" href="prueba.css">#}
-</head>
-<body>
-<h1>REGISTRO DEL PRODUCTO</h1>
-<form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Registrar"/>
-</form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Registro productos{% endblock %}
+
+{% block content %}
+    <h1>REGISTRO DEL PRODUCTO</h1>
+    <form action="" enctype="multipart/form-data" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" id="boton" value="Registrar"/>
+    </form>
+    <a href="{% url 'inicio' %}">Regresar</a>
+{% endblock %}
