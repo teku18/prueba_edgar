@@ -33,7 +33,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['https://curriculum-edgar.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
