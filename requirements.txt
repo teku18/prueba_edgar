@@ -5,3 +5,4 @@ pip==8.1.2
 setuptools==18.0.1
 wheel==0.24.0
 whitenoise
+gunicorn
