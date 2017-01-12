@@ -31,6 +31,8 @@ SECRET_KEY = '8-w_v^l87curqfr=gu@mkd1@prxam9_w!er+83whi@fh1k1z$!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+TEMPLATE_DEBUG = True
+
 ALLOWED_HOSTS = ['https://curriculum-edgar.herokuapp.com']
 
 
