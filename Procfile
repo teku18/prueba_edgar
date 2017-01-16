@@ -1,1 +1,1 @@
-web: gunicorn proyectoEdgar.wsgi:application
+web: gunicorn proyectoEdgar.wsgi

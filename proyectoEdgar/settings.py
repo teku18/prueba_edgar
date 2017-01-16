@@ -136,10 +136,10 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
+STATIC_ROOT = 'staticfiles'
+
 #SELE DICE A DJANGO QUE ESTA CARPETA ES PARA LOS ESTATICOS
 #nota: no funciona aun
-STATICFILES_DIRS = (
-    os.path.join(RUTA_PROYECTO, 'static'),
-)
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_DIRS = (
+#    os.path.join(RUTA_PROYECTO, 'static'),
+#)
