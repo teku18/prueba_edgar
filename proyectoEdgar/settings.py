@@ -33,7 +33,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1', 'https://tiendaedgar.herokuapp.com/']
 
 
 # Application definition
