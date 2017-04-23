@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, CreateView, UpdateView, ListView,
 from .models import producto
 from .forms import productosForm
 from django.core.urlresolvers import reverse_lazy
-
+import requests
 # Create your views here.
 
 class index(TemplateView):

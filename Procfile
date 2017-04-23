@@ -1,1 +1,1 @@
-web: gunicorn proyectoEdgar.wsgi
+web: gunicorn gettingstarted.wsgi --log-file -
